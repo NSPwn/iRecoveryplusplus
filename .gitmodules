@@ -1,0 +1,3 @@
+[submodule "libirecovery"]
+	path = libirecovery
+	url = https://github.com/chronicdev/libirecovery.git

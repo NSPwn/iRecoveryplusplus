@@ -100,7 +100,7 @@ int main(int argc, char *argv[]) {
 			
 					return -1;
 				}
-			
+				cout << "Optarg: " << optarg << endl;
 				if (! Device.Upload(optarg)) {
 				
 					continue;
