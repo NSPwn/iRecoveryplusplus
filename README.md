@@ -17,6 +17,5 @@ Install
 
 	git submodule init
 	make all
-	sudo make install
 
 
