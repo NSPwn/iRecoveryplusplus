@@ -1,7 +1,6 @@
 What is iRecovery++?
 ================================
-iRecovery++ is a program designed to communicate with the iPhone/iPod Touch/iPad via iBoot/iBSS via a USB interface.
-This program is compatible with Mac OS X, Linux and possibly windows.
+iRecovery++ is a C++ interface for libirecovery.
 
 License
 ================================
@@ -11,11 +10,13 @@ Requirements
 ================================
 * libusb-1.0
 * libreadline 6.1 (With latest patches)
+* libirecovery (provided via submodule)
 
 Install
 ================================
 
-	git submodule init
+	git submodule update --init
+	make -C libirecovery
 	make all
 
 
