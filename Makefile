@@ -1,5 +1,5 @@
 CXXFLAGS =	-O2 -g -Wall -fmessage-length=0 -I./include
-CXXALL =	-lreadline -l./libirecovery/libirecovery.a
+CXXALL =	-lreadline ./libirecovery/libirecovery.a
 CXXCSS =	-I"./include" -I"./libirecovery/include" -I"/usr/local/include" -L"/usr/local/lib"
 CXXWIN =	-lusb -I"C:\MinGW\include" -L"C:\MinGW\lib"
 CXXNIX =	-lusb-1.0
