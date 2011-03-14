@@ -1,5 +1,5 @@
 /***
- * iRecovery++ libusb based usb interface for iBoot and iBSS
+ * iRecovery++ C++ interface for libirecovery.
  * Copyright (C) 2010  GreySyntax
  *
  * This program is free software: you can redistribute it and/or modify
@@ -16,20 +16,31 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef PROGRAM_H_
+#ifndef DEVICE_H_
+#define DEVICE_H_
 
-#define PROGRAM_H_
+#define DEVICE_CONNECTION_ATTEMPTS 5
 
-#include <sys/types.h>
-#include <errno.h>
-#include <signal.h>
-#include <ctype.h>
-#include "IDevice.h"
-#include "Common.h"
+extern "C" {
+	#include "libirecovery.h"
+}
 
-void conditions();
-void flags();
-void shutdown(int sig);
-void warranty();
+namespace irecovery {
+	
+	class Device {
+		
+		public:
+			static Device* Open();
+			void Reset();
+		
+		private:
+			irecv_error_t error;
+			irecv_client_t _client;
+			uint32_t _mode;
+			
+			Device(irecv_client_t client);
+			~Device();
+	}
+};
 
-#endif /* PROGRAM_H_ */
+#endif /* DEVICE_H_ */
