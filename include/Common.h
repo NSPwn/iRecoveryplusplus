@@ -23,6 +23,7 @@
 #define VERSION "3.0.0.0pre"
 
 #include <iostream>
+#include <cstdlib>
 #include <string.h>
 #include <stdlib.h>
 

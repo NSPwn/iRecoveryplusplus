@@ -32,7 +32,7 @@ namespace irecovery {
 		
 		if (_mode) {
 			
-			delete _mode;
+			free((void*)_mode);
 		}
 		
 		if (_client != NULL) {
@@ -57,12 +57,12 @@ namespace irecovery {
 			sleep(1);
 		}
 		
-		if (_client == NULL) {
+		if (client == NULL) {
 			
 			return NULL;
 		}
 		
-		return (*Device)(new Device(client));
+		return (Device*)(new Device(client));
 	}
 	
 	void Device::Reset() {

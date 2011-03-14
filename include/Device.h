@@ -25,6 +25,8 @@ extern "C" {
 	#include "libirecovery.h"
 }
 
+#include "Common.h"
+
 namespace irecovery {
 	
 	class Device {
@@ -40,7 +42,7 @@ namespace irecovery {
 			
 			Device(irecv_client_t client);
 			~Device();
-	}
+	};
 };
 
 #endif /* DEVICE_H_ */
